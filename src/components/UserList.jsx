@@ -9,7 +9,7 @@ function UserList(props) {
         <div>
             <h2>Lista utilizatorilor:</h2>
             { users.map((user, index) => {
-                console.log('user',user)
+                
                 return <UserItem
                     // adaugam prop-ul id componentei UserItem
                     id={ user.id }
@@ -19,6 +19,7 @@ function UserList(props) {
                     logo={user.logo}
                     isGoldClient={ user.isGoldClient }
                     key={ index }
+                    deleteUser = {props.deleteUser}
                 />
             })}
         </div>

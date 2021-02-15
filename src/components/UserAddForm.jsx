@@ -51,7 +51,8 @@ class UserAddForm extends React.Component {
         // submitAddForm mai jos!
         const {name, email, salariu, logo, isGoldClient} = this.state;
         const {submitAddForm} = this.props;
-        const {removeUser} = this.props;
+        
+        
 
         return (<div>
             <form
@@ -65,7 +66,7 @@ class UserAddForm extends React.Component {
                 // state-ul din App.js! Cum? this e cheia! (SFAT: consultati teoria la partea asta)
                 // ALSO: functia submitAddForm va fi apelata doar la submit! (Din nou, teoria e importanta) Si
                 // pentru a folosi evenimentul de submit, trebuie pasat ca parametru!
-                onSubmit={(event) => submitAddForm(event, name, email, salariu, logo, isGoldClient)}
+                onSubmit={submitAddForm.bind(undefined, name, email, salariu, logo, isGoldClient)}
                 
             >
                 <h2>Adauga utilizatori:</h2>
@@ -109,10 +110,7 @@ class UserAddForm extends React.Component {
 
                 <input type="submit" value="Introdu utilizatorul"/>
             </form>
-            {/* <form className="user-delete" 
-                onSubmit={(event) => removeUser(event, name, email, isGoldClient)}>
-
-            </form> */}
+           
                 </div>
         )
     }

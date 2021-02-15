@@ -1,21 +1,22 @@
 import React from 'react';
 
 function UserItem(props) {
-    const {name, email, isGoldClient, salariu, logo} = props;
+    const {name, email, isGoldClient, salariu, logo, deleteUser, id} = props;
 
     return (
         <div>
             <h3>{ name }</h3>
             <p>{ email }</p>
             <p>{ salariu }</p>
-            <img src={logo} alt="Logo"/>
+            <img src={process.env.PUBLIC_URL + '/images/' + logo} alt="Logo"/>
             { isGoldClient
                 ? <h3>Client GOLD</h3>
                 : null
             }
-            <button>Sterge Utilizator</button>
+            <button onClick={() => deleteUser(id)}>Sterge Utilizator</button>
         </div>
     );
+    
 }
 
 export default UserItem;

@@ -1,8 +1,10 @@
 import React from 'react';
 import PostItem from './PostItem';
 
+// Observatie: Componenta UserList a redevenit o componenta declarata cu function.
 function PostList(props) {
     const { posts } = props;
+    console.log(props);
 
     return (
         <div>
@@ -10,8 +12,6 @@ function PostList(props) {
             { posts.map((post, index) => {
                 console.log('post',post)
                 return <PostItem
-                    // adaugam prop-ul id componentei UserItem
-                    id={ post.id }
                     title={ post.title }
                     body={ post.body }
                     key={ index }
