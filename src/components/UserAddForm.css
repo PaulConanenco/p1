@@ -1,14 +1,28 @@
 /* ATENTIE! Nu folositi selectori asa de generali. Acest h2 il afecteaza si pe cel din App.js! */
-h2 {
-    font-style: italic;
+.user-add-form > h2 {
+  font-style: italic;
 }
 
 /* Dati componentei voastre o clasa cat mai specifica si stilizati elementele din interiorul ei. */
 .user-add-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  margin-bottom: 100px;
+  border: 1px solid black;
+  box-shadow: 3px 3px;
 }
 
 .user-add-form input {
-    max-width: 50%;
+  max-width: 90%;
+  border-radius: 50px 50px 50px 50px;
+}
+
+input[type="submit"] {
+  background-color: grey;
+  color: rgb(255, 255, 255);
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 400px;
 }

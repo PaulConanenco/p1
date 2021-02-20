@@ -1,0 +1,7 @@
+.user-item {
+  margin-left: 10px;
+}
+
+.user-item > button {
+  border-radius: 50px 50px 50px 50px;
+}
