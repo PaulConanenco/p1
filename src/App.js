@@ -1,8 +1,6 @@
 import React from 'react';
 import UserList from './components/UserList';
 import PostList from './components/PostList';
-
-// Importam formularul.
 import UserAddForm from './components/UserAddForm';
 import './App.css';
 
@@ -15,8 +13,7 @@ class App extends React.Component {
       users: [],
       posts: [],
       isUsers: true,
-      isPosts: false,
-      email:''
+      isPosts: false
     };
 
   }
@@ -91,12 +88,14 @@ class App extends React.Component {
             email,
             salariu,
             logo,
-            isGoldClient
+            isGoldClient           
           }
         ]
       }
     });
   }
+
+  
 
 
 
@@ -108,13 +107,15 @@ class App extends React.Component {
     });
 }
 
-// value={this.state.email}
+
+
  
   render() {
     return(
       <div className="app" style={{background: this.state.background, color: this.state.color}}>
         <h1>Admin panel</h1>
         <UserAddForm submitAddForm={this.submitAddForm.bind(this)} />
+        
         
         {this.state.isUsers && <UserList users={this.state.users} deleteUser={this.deleteUser.bind(this)} />}
         {this.state.isPosts && <PostList posts={this.state.posts} />}

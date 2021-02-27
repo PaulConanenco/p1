@@ -2,7 +2,7 @@ import React from 'react';
 import './UserItem.css'
 
 function UserItem(props) {
-    const {name, email, isGoldClient, salariu, logo, deleteUser, id} = props;
+    const {name, email, isGoldClient, salariu, deleteUser, id} = props;
 
     return (
         <div className="user-item">
