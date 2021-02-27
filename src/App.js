@@ -15,7 +15,8 @@ class App extends React.Component {
       users: [],
       posts: [],
       isUsers: true,
-      isPosts: false
+      isPosts: false,
+      email:''
     };
 
   }
@@ -97,6 +98,8 @@ class App extends React.Component {
     });
   }
 
+
+
   deleteUser (userIdToDelete) {
     
     this.setState(prevState => {     
@@ -104,6 +107,8 @@ class App extends React.Component {
         return { users };
     });
 }
+
+// value={this.state.email}
  
   render() {
     return(
@@ -113,17 +118,17 @@ class App extends React.Component {
         
         {this.state.isUsers && <UserList users={this.state.users} deleteUser={this.deleteUser.bind(this)} />}
         {this.state.isPosts && <PostList posts={this.state.posts} />}
-
+      
         <button onClick={this.triggerUsers}>Afiseaza Useri</button>
-        <button onClick={this.triggerPosts}>Afiseaza Postari</button>
+        <button onClick={this.triggerPosts}>Afiseaza Postari</button>       
 
-       
+        <div className='change-color'>
+         <input type="color" onChange={(event) => this.changeColor(event)}/>
+         </div>
 
-        <input type="color" onChange={(event) => this.changeColor(event)}/>
-        <input type="color" onChange={(event) => this.changeTextColor(event)}/>
-
-        
-
+         <div className='change-text'>
+           <input type="color" onChange={(event) => this.changeTextColor(event)}/>
+          </div>
       </div>
     );
   }

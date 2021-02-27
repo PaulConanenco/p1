@@ -4,4 +4,5 @@
 
 .user-item > button {
   border-radius: 50px 50px 50px 50px;
+  background-color: rgb(151, 151, 151);
 }
