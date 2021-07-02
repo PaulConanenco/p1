@@ -1,4 +1,4 @@
-## JavaScript Advanced - Curs 4
+
 
 Pentru a rula aceasta etapa (in linie de comanda):
 
